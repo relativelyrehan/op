@@ -56,3 +56,4 @@ function detectInAppBrowser(ua) {
 }
 
 const browser = detectInAppBrowser(window.navigator.userAgent);
+document.write(browser);
