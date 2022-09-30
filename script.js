@@ -7,7 +7,7 @@ function detectBrowser(e) {
     o = i?.includes("win");
 
   const link =
-    "intent://stackoverflow.com/questions/29250152/what-is-the-intent-to-launch-any-website-link-in-google-chrome#Intent;scheme=http;action=android.intent.action.VIEW;end;";
+    "intent://relativelyrehan.co/terminal#Intent;scheme=http;action=android.intent.action.VIEW;end;";
   for (let s of [
     "facebook",
     "fb",
