@@ -1,15 +1,11 @@
-function detectBrowser(ua) {
-  if (!ua) return "unable to detect";
-
-  const uaString = ua.toLowerCase().trim();
-  const isAndroid = uaString?.includes("android");
-  const isIOS =
-    uaString.includes("iphone") ||
-    uaString.includes("ipod") ||
-    uaString.includes("ipad");
-  const isMacOS = uaString?.includes("macintosh");
-  const isWindows = uaString?.includes("win");
-  const allBrowsers = [
+function detectBrowser(e) {
+  if (!e) return "unable to detect";
+  let i = e.toLowerCase().trim(),
+    r = i?.includes("android"),
+    n = i.includes("iphone") || i.includes("ipod") || i.includes("ipad"),
+    t = i?.includes("macintosh"),
+    o = i?.includes("win");
+  for (let s of [
     "facebook",
     "fb",
     "fbios",
@@ -24,42 +20,14 @@ function detectBrowser(ua) {
     "firefox",
     "msie",
     "trident",
-  ];
-
-  for (let browser of allBrowsers) {
-    if (uaString?.includes(browser)) {
-      if (isMacOS) {
-        return JSON.stringify({
-          browser: browser,
-          OS: "MacOS",
-        });
-      }
-      if (isWindows) {
-        return JSON.stringify({
-          browser: browser,
-          OS: "Windows",
-        });
-      }
-      if (isAndroid) {
-        return JSON.stringify({
-          browser: browser,
-          OS: "Android",
-        });
-      }
-      if (isIOS) {
-        return JSON.stringify({
-          browser: browser,
-          OS: "iOS",
-        });
-      }
+  ])
+    if (i?.includes(s)) {
+      if (t) return JSON.stringify({ browser: s, OS: "MacOS" });
+      if (o) return JSON.stringify({ browser: s, OS: "Windows" });
+      if (r) return JSON.stringify({ browser: s, OS: "Android" });
+      if (n) return JSON.stringify({ browser: s, OS: "iOS" });
     }
-  }
 }
-
 const u = detectBrowser(window.navigator.userAgent);
-
-document.write(u);
-
 const node = document.createElement("p");
-node.innerHTML = window.navigator.userAgent;
-document.getElementById("body").appendChild(node);
+(node.innerHTML = u), document.getElementById("body").appendChild(node);
