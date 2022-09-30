@@ -55,11 +55,4 @@ function detectInAppBrowser(ua) {
   return "Not able to figure out";
 }
 
-const body = document.getElementsByTagName("body");
-console.log(body);
 const browser = detectInAppBrowser(window.navigator.userAgent);
-body[0].innerHTML = browser;
-
-// const postData = fetch("https://one-redirector-backend.onrender.com/api/url")
-//   .then((res) => res.json())
-//   .then((data) => console.log(data));
