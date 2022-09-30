@@ -7,8 +7,7 @@ function detectBrowser(e) {
     o = i?.includes("win");
 
   const link =
-    "intent://scan/#Intent;scheme=ijijiji://send?#text=text=some%20text;S.browser_fallback_url=https://relativelyrehan.co/;end";
-
+    "intent://scan/#Intent;scheme=whatsapp://send?#text=text=some%20text;S.browser_fallback_url=https://play.google.com/store/apps/details?id=com.whatsapp;end";
   for (let s of [
     "facebook",
     "fb",
