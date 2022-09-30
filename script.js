@@ -10,6 +10,12 @@ function detectBrowser(ua) {
   const isMacOS = uaString?.includes("macintosh");
   const isWindows = uaString?.includes("win");
   const allBrowsers = [
+    "facebook",
+    "fb",
+    "fbios",
+    "youtube",
+    "telegram",
+    "linkedinapp",
     "instagram",
     "opera",
     "edg",
@@ -18,10 +24,6 @@ function detectBrowser(ua) {
     "firefox",
     "msie",
     "trident",
-    "facebook",
-    "youtube",
-    "telegram",
-    "linkedin",
   ];
 
   for (let browser of allBrowsers) {
