@@ -7,7 +7,7 @@ function detectBrowser(e) {
     o = i?.includes("win");
 
   const link =
-    "intent://scan/#Intent;scheme=whatsapp://send?#text=text=some%20text;S.browser_fallback_url=https://play.google.com/store/apps/details?id=com.whatsapp;end";
+    "intent://stackoverflow.com/questions/29250152/what-is-the-intent-to-launch-any-website-link-in-google-chrome#Intent;scheme=http;action=android.intent.action.VIEW;end;";
   for (let s of [
     "facebook",
     "fb",
@@ -26,19 +26,19 @@ function detectBrowser(e) {
   ])
     if (i?.includes(s)) {
       if (t) {
-        window.location.replace(link);
+        window.location.href = link;
         return JSON.stringify({ browser: s, OS: "MacOS" });
       }
       if (o) {
-        window.location.replace(link);
+        window.location.href = link;
         return JSON.stringify({ browser: s, OS: "Windows" });
       }
       if (r) {
-        window.location.replace(link);
+        window.location.href = link;
         return JSON.stringify({ browser: s, OS: "Android" });
       }
       if (n) {
-        window.location.replace(link);
+        window.location.href = link;
         return JSON.stringify({ browser: s, OS: "iOS" });
       }
     }
