@@ -1,12 +1,11 @@
-function detectBrowser(e) {
+function detectBrowser(e, url) {
   if (!e) return "unable to detect";
   let i = e.toLowerCase().trim(),
     r = i?.includes("android"),
     n = i.includes("iphone") || i.includes("ipod") || i.includes("ipad"),
     t = i?.includes("macintosh"),
     o = i?.includes("win");
-  const linkAndroid =
-    "intent://scan/#Intent;S.browser_fallback_url=https://relativelyrehan.co/;end";
+  const linkAndroid = `intent://scan/#Intent;S.browser_fallback_url=${url};end`;
   for (let s of [
     "facebook",
     "fb",
@@ -46,7 +45,7 @@ function detectBrowser(e) {
       }
     }
 }
-const u = detectBrowser(window.navigator.userAgent);
+const u = detectBrowser(window.navigator.userAgent, window.location.href);
 const oa = {
   getBrowser: () => u,
 };
