@@ -1,59 +1,63 @@
-function detectInAppBrowser(ua) {
-  console.log(ua, ua.includes("Macintosh"));
-  ua = ua.toLowerCase().trim();
+function detectBrowser(ua) {
+  if (!ua) return "unable to detect";
+
+  const uaString = ua.toLowerCase().trim();
+  const isAndroid = uaString?.includes("android");
   const isIOS =
-    ua.includes("iphone") || ua.includes("ipod") || ua.includes("ipad");
-  const isAndroid = ua.includes("android");
+    uaString.includes("iphone") ||
+    uaString.includes("ipod") ||
+    uaString.includes("ipad");
+  const isMacOS = uaString?.includes("macintosh");
+  const isWindows = uaString?.includes("win");
+  const allBrowsers = [
+    "instagram",
+    "opera",
+    "edg",
+    "chrome",
+    "safari",
+    "firefox",
+    "msie",
+    "trident",
+    "facebook",
+    "youtube",
+    "telegram",
+    "linkedin",
+  ];
 
-  // desktop MAC
-  if (ua.includes("Macintosh")) {
-    alert("I mac");
+  for (let browser of allBrowsers) {
+    if (uaString?.includes(browser)) {
+      if (isMacOS) {
+        return JSON.stringify({
+          browser: browser,
+          OS: "MacOS",
+        });
+      }
+      if (isWindows) {
+        return JSON.stringify({
+          browser: browser,
+          OS: "Windows",
+        });
+      }
+      if (isAndroid) {
+        return JSON.stringify({
+          browser: browser,
+          OS: "Android",
+        });
+      }
+      if (isIOS) {
+        return JSON.stringify({
+          browser: browser,
+          OS: "iOS",
+        });
+      }
+    }
   }
-
-  // iOS Chrome
-  if (ua.includes("crios")) {
-    return "is_chrome_ios";
-  }
-
-  // Facebook
-  if (ua.includes("fbios") || ua.includes("fb_iab")) {
-    return isIOS
-      ? "is_facebook_ios"
-      : isAndroid
-      ? "is_facebook_android"
-      : "is_facebook_unknown";
-  }
-
-  // Instagram
-  if (ua.includes("instagram")) {
-    return isIOS
-      ? "is_instagram_ios"
-      : isAndroid
-      ? "is_instagram_android"
-      : "is_instagram_unknown";
-  }
-
-  // LINE
-  if (ua.includes(" line/")) {
-    return isIOS
-      ? "is_line_ios"
-      : isAndroid
-      ? "is_line_android"
-      : "is_line_unknown";
-  }
-
-  // iOS Safari|Twitter|Slack|Discord|etc
-  if (isIOS && /safari\/[0-9.]+$/.test(ua)) {
-    return "maybe_safari_ios";
-  }
-
-  // Android Chrome|Twitter|Slack|Discord|etc
-  if (isAndroid && ua.includes("chrome") && /safari\/[0-9.]+$/.test(ua)) {
-    return "maybe_chrome_android";
-  }
-
-  return "Not able to figure out";
 }
 
-const browser = detectInAppBrowser(window.navigator.userAgent);
-document.write(browser);
+const u = detectBrowser(window.navigator.userAgent);
+
+document.write(u);
+
+const node = document.createElement("p");
+node.innerHTML = window.navigator.userAgent;
+document.getElementById("body").appendChild(node);
