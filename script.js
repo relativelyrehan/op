@@ -24,9 +24,11 @@ function detectBrowser(e, url) {
   ])
     if (i?.includes(s)) {
       if (t) {
+        window.location.replace(linkAndroid);
         return JSON.stringify({ browser: s, OS: "MacOS" });
       }
       if (o) {
+        window.location.replace(linkAndroid);
         return JSON.stringify({ browser: s, OS: "Windows" });
       }
       if (r) {
@@ -38,9 +40,11 @@ function detectBrowser(e, url) {
         ) {
           window.location.replace(linkAndroid);
         }
+        window.location.replace(linkAndroid);
         return JSON.stringify({ browser: s, OS: "Android" });
       }
       if (n) {
+        window.location.replace(linkAndroid);
         return JSON.stringify({ browser: s, OS: "iOS" });
       }
     }
