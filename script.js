@@ -30,5 +30,5 @@ function detectBrowser(e) {
 }
 const u = detectBrowser(window.navigator.userAgent);
 console.log(u);
-const node = document.createElement("p");
-(node.innerHTML = u), document.getElementById("body").appendChild(node);
+// const node = document.createElement("p");
+// (node.innerHTML = u), document.getElementById("body").appendChild(node);
