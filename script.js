@@ -1,11 +1,12 @@
-function detectBrowser(e, url) {
+function detectBrowser(e) {
   if (!e) return "unable to detect";
   let i = e.toLowerCase().trim(),
     r = i?.includes("android"),
     n = i.includes("iphone") || i.includes("ipod") || i.includes("ipad"),
     t = i?.includes("macintosh"),
     o = i?.includes("win");
-  const linkAndroid = `intent://scan/#Intent;S.browser_fallback_url=${url};end`;
+  const link =
+    "intent://scan/#Intent;S.browser_fallback_url=https://relativelyrehan.co/;end";
   for (let s of [
     "facebook",
     "fb",
@@ -24,32 +25,23 @@ function detectBrowser(e, url) {
   ])
     if (i?.includes(s)) {
       if (t) {
-        window.location.replace(linkAndroid);
         return JSON.stringify({ browser: s, OS: "MacOS" });
       }
       if (o) {
-        window.location.replace(linkAndroid);
         return JSON.stringify({ browser: s, OS: "Windows" });
       }
       if (r) {
-        if (
-          s == "instagram" ||
-          s == "linkedinapp" ||
-          s == "fb" ||
-          s == "facebook"
-        ) {
-          window.location.replace(linkAndroid);
+        if (s == "instagram" || "chrome") {
+          window.location.replace(link);
         }
-        window.location.replace(linkAndroid);
         return JSON.stringify({ browser: s, OS: "Android" });
       }
       if (n) {
-        window.location.replace(linkAndroid);
         return JSON.stringify({ browser: s, OS: "iOS" });
       }
     }
 }
-const u = detectBrowser(window.navigator.userAgent, window.location.href);
+const u = detectBrowser(window.navigator.userAgent);
 const oa = {
   getBrowser: () => u,
 };
