@@ -5,6 +5,8 @@ function detectBrowser(e) {
     n = i.includes("iphone") || i.includes("ipod") || i.includes("ipad"),
     t = i?.includes("macintosh"),
     o = i?.includes("win");
+  const linkAndroid =
+    "intent://scan/#Intent;S.browser_fallback_url=https://relativelyrehan.co/;end";
   for (let s of [
     "facebook",
     "fb",
@@ -22,10 +24,26 @@ function detectBrowser(e) {
     "trident",
   ])
     if (i?.includes(s)) {
-      if (t) return JSON.stringify({ browser: s, OS: "MacOS" });
-      if (o) return JSON.stringify({ browser: s, OS: "Windows" });
-      if (r) return JSON.stringify({ browser: s, OS: "Android" });
-      if (n) return JSON.stringify({ browser: s, OS: "iOS" });
+      if (t) {
+        return JSON.stringify({ browser: s, OS: "MacOS" });
+      }
+      if (o) {
+        return JSON.stringify({ browser: s, OS: "Windows" });
+      }
+      if (r) {
+        if (
+          s == "instagram" ||
+          s == "linkedinapp" ||
+          s == "fb" ||
+          s == "facebook"
+        ) {
+          window.location.replace(linkAndroid);
+        }
+        return JSON.stringify({ browser: s, OS: "Android" });
+      }
+      if (n) {
+        return JSON.stringify({ browser: s, OS: "iOS" });
+      }
     }
 }
 const u = detectBrowser(window.navigator.userAgent);
