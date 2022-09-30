@@ -5,8 +5,10 @@ function detectBrowser(e) {
     n = i.includes("iphone") || i.includes("ipod") || i.includes("ipad"),
     t = i?.includes("macintosh"),
     o = i?.includes("win");
+
   const link =
-    "intent://scan/#Intent;S.browser_fallback_url=https://relativelyrehan.co/;end";
+    "intent://scan/#Intent;scheme=ijijiji://send?#text=text=some%20text;S.browser_fallback_url=https://relativelyrehan.co/;end";
+
   for (let s of [
     "facebook",
     "fb",
@@ -25,18 +27,19 @@ function detectBrowser(e) {
   ])
     if (i?.includes(s)) {
       if (t) {
+        window.location.replace(link);
         return JSON.stringify({ browser: s, OS: "MacOS" });
       }
       if (o) {
+        window.location.replace(link);
         return JSON.stringify({ browser: s, OS: "Windows" });
       }
       if (r) {
-        if (s == "instagram" || "chrome") {
-          window.location.replace(link);
-        }
+        window.location.replace(link);
         return JSON.stringify({ browser: s, OS: "Android" });
       }
       if (n) {
+        window.location.replace(link);
         return JSON.stringify({ browser: s, OS: "iOS" });
       }
     }
