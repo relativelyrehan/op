@@ -16,13 +16,6 @@ function detectBrowser(e) {
     "telegram",
     "linkedinapp",
     "instagram",
-    "opera",
-    "edg",
-    "chrome",
-    "safari",
-    "firefox",
-    "msie",
-    "trident",
   ])
     if (i?.includes(s)) {
       if (t) {
