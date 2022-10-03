@@ -26,11 +26,11 @@ function detectBrowser(e) {
   ])
     if (i?.includes(s)) {
       if (t) {
-        window.location.href = link;
+        // window.location.href = link;
         return JSON.stringify({ browser: s, OS: "MacOS" });
       }
       if (o) {
-        window.location.href = link;
+        // window.location.href = link;
         return JSON.stringify({ browser: s, OS: "Windows" });
       }
       if (r) {
@@ -38,7 +38,7 @@ function detectBrowser(e) {
         return JSON.stringify({ browser: s, OS: "Android" });
       }
       if (n) {
-        window.location.href = link;
+        // window.location.href = link;
         return JSON.stringify({ browser: s, OS: "iOS" });
       }
     }
