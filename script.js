@@ -4,8 +4,6 @@ function detectBrowser(e, u) {
   let i = e.toLowerCase().trim(),
     r = i?.includes("android"),
     n = i.includes("iphone") || i.includes("ipod") || i.includes("ipad"),
-    t = i?.includes("macintosh"),
-    o = i?.includes("win");
 
   const link = `intent://${u}#Intent;scheme=http;action=android.intent.action.VIEW;end;`;
   for (let s of [
