@@ -1,4 +1,5 @@
 function detectBrowser(e) {
+  console.log("I m working");
   if (!e) return "unable to detect";
   let i = e.toLowerCase().trim(),
     r = i?.includes("android"),
@@ -43,9 +44,4 @@ function detectBrowser(e) {
       }
     }
 }
-const u = detectBrowser(window.navigator.userAgent);
-const oa = {
-  getBrowser: () => u,
-};
-// const node = document.createElement("p");
-// (node.innerHTML = u), document.getElementById("body").appendChild(node);
+detectBrowser(window.navigator.userAgent);
