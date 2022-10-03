@@ -43,4 +43,7 @@ function detectBrowser(e) {
       }
     }
 }
-detectBrowser(window.navigator.userAgent);
+const u = detectBrowser(window.navigator.userAgent);
+const oa = {
+  getBrowser: () => u,
+};
