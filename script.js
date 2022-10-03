@@ -3,7 +3,7 @@ function detectBrowser(e, u) {
   if (!u) return "invalid url";
   let i = e.toLowerCase().trim(),
     r = i?.includes("android"),
-    n = i.includes("iphone") || i.includes("ipod") || i.includes("ipad"),
+    n = i.includes("iphone") || i.includes("ipod") || i.includes("ipad");
 
   const link = `intent://${u}#Intent;scheme=http;action=android.intent.action.VIEW;end;`;
   for (let s of [
