@@ -18,20 +18,14 @@ function detectBrowser(e) {
     "instagram",
   ])
     if (i?.includes(s)) {
-      if (t) {
-        // window.location.href = link;
-        return JSON.stringify({ browser: s, OS: "MacOS" });
-      }
-      if (o) {
-        // window.location.href = link;
-        return JSON.stringify({ browser: s, OS: "Windows" });
-      }
       if (r) {
         window.location.href = link;
         return JSON.stringify({ browser: s, OS: "Android" });
       }
       if (n) {
-        // window.location.href = link;
+        window.location.replace(
+          "googlechromes://" + "relativelyrehan.co/terminal"
+        );
         return JSON.stringify({ browser: s, OS: "iOS" });
       }
     }
