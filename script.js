@@ -7,7 +7,7 @@ function detectBrowser(e) {
     o = i?.includes("win");
 
   const link =
-    "intent://relativelyrehan.co/terminal#Intent;scheme=http;action=android.intent.action.VIEW;end;";
+    "intent://www.relativelyrehan.co/terminal#Intent;scheme=http;action=android.intent.action.VIEW;end;";
   for (let s of [
     "facebook",
     "fb",
