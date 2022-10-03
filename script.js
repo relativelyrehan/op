@@ -1,5 +1,4 @@
 function detectBrowser(e) {
-  alert("I am working");
   if (!e) return "unable to detect";
   let i = e.toLowerCase().trim(),
     r = i?.includes("android"),
