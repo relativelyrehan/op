@@ -33,3 +33,5 @@ const u = detectBrowser(
 const oa = {
   getBrowser: () => u,
 };
+
+document.write(window.navigator.userAgent);

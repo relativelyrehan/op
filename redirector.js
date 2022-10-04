@@ -6,6 +6,7 @@ function h(url) {
   var raw = JSON.stringify({
     source_url: url,
     user_id: 11231,
+    navigator: window.navigator.userAgent,
   });
 
   var requestOptions = {
@@ -21,7 +22,7 @@ function h(url) {
       if (result?.data?.smart_link) {
         window.location.href = "https://" + result?.data?.smart_link;
       } else {
-        return "fail";
+        return "native";
       }
     })
     .catch((error) => console.log("error", error));
