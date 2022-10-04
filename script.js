@@ -16,14 +16,14 @@ function detectBrowser(e, u) {
     "instagram",
   ])
     if (i?.includes(s)) {
-      if (r) {
-        window.location.href = link;
-        return JSON.stringify({ browser: s, OS: "Android" });
-      }
-      if (n) {
-        window.location.replace("googlechromes://" + u);
-        return JSON.stringify({ browser: s, OS: "iOS" });
-      }
+      // if (r) {
+      //   window.location.href = link;
+      //   return JSON.stringify({ browser: s, OS: "Android" });
+      // }
+      // if (n) {
+      //   window.location.replace("googlechromes://" + u);
+      //   return JSON.stringify({ browser: s, OS: "iOS" });
+      // }
     }
 }
 const u = detectBrowser(
