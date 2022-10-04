@@ -1,12 +1,12 @@
-function h(url) {
-  if (!url) return;
+function h(w) {
+  if (!w) return;
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
   var raw = JSON.stringify({
-    source_url: url,
+    source_url: w?.location?.href,
     user_id: 11231,
-    navigator: window.navigator.userAgent,
+    user_agent: w?.navigator?.userAgent,
   });
 
   var requestOptions = {
@@ -19,7 +19,7 @@ function h(url) {
   fetch("https://service.openinapp.com/api/v1/link/generate", requestOptions)
     .then((response) => response.json())
     .then((result) => {
-      if (result?.data?.smart_link) {
+      if (result?.data?.smart_link && result?.data?.inApp) {
         window.location.href = "https://" + result?.data?.smart_link;
       } else {
         return "native";
@@ -28,4 +28,4 @@ function h(url) {
     .catch((error) => console.log("error", error));
 }
 
-h(window.location.href);
+h(window);
