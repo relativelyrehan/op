@@ -50,7 +50,7 @@ function h(w) {
             () =>
               (window.location.href =
                 "x-web-search://?" + result.data.smart_link),
-            200
+            400
           );
         } else {
           window.location.href = "https://" + result.data.smart_link;
