@@ -40,18 +40,26 @@ function h(w) {
         result.data.inApp
       ) {
         if (result.data.isIOS) {
-          setTimeout(
-            () =>
-              (window.location.href =
-                "googlechromes://" + result.data.smart_link),
-            200
-          );
-          setTimeout(
-            () =>
-              (window.location.href =
-                "x-web-search://?" + result.data.smart_link),
-            400
-          );
+          setTimeout(function () {
+            window.location.replace(
+              "googlechromes://" + result.data.smart_link
+            );
+          }, 300);
+          setTimeout(function () {
+            window.location.replace(
+              "brave://open-url?url=" + result.data.smart_link
+            );
+          }, 600);
+          setTimeout(function () {
+            window.location.replace(
+              "microsoft-edge-https://" + result.data.smart_link
+            );
+          }, 900);
+          setTimeout(function () {
+            window.location.replace(
+              "firefox://open-url?url=" + result.data.smart_link
+            );
+          }, 1200);
         } else {
           window.location.href = "https://" + result.data.smart_link;
         }
