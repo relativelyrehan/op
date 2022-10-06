@@ -40,12 +40,18 @@ function h(w) {
         result.data.inApp
       ) {
         if (result.data.isIOS) {
-          var a = document.createElement("a");
-          a.setAttribute("href", "https://" + result.data.smart_link);
-          a.setAttribute("target", "_blank");
-          a.click();
-          // window.location.href =
-          //   "ftp://https://dancing-beignet-ffe33d.netlify.app/file.html";
+          setTimeout(
+            () =>
+              (window.location.href =
+                "googlechromes://" + result.data.smart_link),
+            200
+          );
+          setTimeout(
+            () =>
+              (window.location.href =
+                "x-web-search://?" + result.data.smart_link),
+            200
+          );
         } else {
           window.location.href = "https://" + result.data.smart_link;
         }
