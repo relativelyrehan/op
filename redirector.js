@@ -40,8 +40,7 @@ function h(w) {
         result.data.inApp
       ) {
         if (result.data.isIOS) {
-          window.location.href = "brave-https://" + result.data.smart_link;
-          alert("In IOS");
+          window.location.href = "https://" + result.data.smart_link;
         } else {
           window.location.href = "https://" + result.data.smart_link;
         }
