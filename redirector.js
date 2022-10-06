@@ -25,7 +25,10 @@ function h(w) {
     body: raw,
     redirect: "follow",
   };
-  fetch("https://service.openinapp.com/api/v1/link/generate", requestOptions)
+  fetch(
+    "https://service.openinapp.com/api/v1/link/generate-sdk",
+    requestOptions
+  )
     .then(function (res) {
       return res.json();
     })
