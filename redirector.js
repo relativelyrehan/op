@@ -36,7 +36,11 @@ function h(w) {
         result.data.smart_link &&
         result.data.inApp
       ) {
-        window.location.href = "https://" + result.data.smart_link;
+        if (result.data.isIOS) {
+          window.location.href = "googlechromes://" + result.data.smart_link;
+        } else {
+          window.location.href = "https://" + result.data.smart_link;
+        }
       } else {
         return "native";
       }

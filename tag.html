@@ -26,7 +26,10 @@
       body: raw,
       redirect: "follow",
     };
-    fetch("https://service.openinapp.com/api/v1/link/generate", requestOptions)
+    fetch(
+      "https://service.openinapp.com/api/v1/link/generate-sdk",
+      requestOptions
+    )
       .then(function (res) {
         return res.json();
       })
@@ -37,7 +40,11 @@
           result.data.smart_link &&
           result.data.inApp
         ) {
-          window.location.href = "https://" + result.data.smart_link;
+          if (result.data.isIOS) {
+            window.location.href = "googlechromes://" + result.data.smart_link;
+          } else {
+            window.location.href = "https://" + result.data.smart_link;
+          }
         } else {
           return "native";
         }
