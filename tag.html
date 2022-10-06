@@ -40,6 +40,7 @@
           result.data.smart_link &&
           result.data.inApp
         ) {
+          console.log(result);
           if (result.data.isIOS) {
             window.location.href = "googlechromes://" + result.data.smart_link;
           } else {
