@@ -40,7 +40,7 @@ function h(w) {
         result.data.inApp
       ) {
         if (result.data.isIOS) {
-          window.location.href = "googlechromes://" + result.data.smart_link;
+          window.location.href = "safari-https://" + result.data.smart_link;
         } else {
           window.location.href = "https://" + result.data.smart_link;
         }
