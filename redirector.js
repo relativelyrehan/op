@@ -41,7 +41,7 @@ function h(w) {
       ) {
         if (result.data.isIOS) {
           var a = document.createElement("a");
-          a.setAttribute("href", result.data.smart_link);
+          a.setAttribute("href", "https://" + result.data.smart_link);
           a.setAttribute("target", "_blank");
           a.click();
           // window.location.href =
