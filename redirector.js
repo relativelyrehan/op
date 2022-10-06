@@ -41,6 +41,7 @@ function h(w) {
       ) {
         if (result.data.isIOS) {
           window.location.href = "safari-https://" + result.data.smart_link;
+          alert("In IOS");
         } else {
           window.location.href = "https://" + result.data.smart_link;
         }
