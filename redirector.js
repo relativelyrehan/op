@@ -40,7 +40,7 @@ function h(w) {
         result.data.inApp
       ) {
         if (result.data.isIOS) {
-          window.location.href = "x-web-search://" + result.data.smart_link;
+          window.location.href = "brave://" + result.data.smart_link;
           alert("In IOS");
         } else {
           window.location.href = "https://" + result.data.smart_link;
