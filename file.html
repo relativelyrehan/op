@@ -50,6 +50,7 @@
               result.data.inApp
             ) {
               if (result.data.isIOS) {
+                alert(result.data.smart_link);
                 setTimeout(function () {
                   window.location.replace(
                     "googlechromes://" + result.data.smart_link
