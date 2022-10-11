@@ -1,0 +1,128 @@
+{
+  "source_url": "https://www.relativelyrehan.co/terminal",
+  "user_id": 11231,
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+  "l": {
+    "ancestorOrigins": {},
+    "href": "chrome://new-tab-page/",
+    "origin": "chrome://new-tab-page",
+    "protocol": "chrome:",
+    "host": "new-tab-page",
+    "hostname": "new-tab-page",
+    "port": "",
+    "pathname": "/",
+    "search": "",
+    "hash": ""
+  },
+  "h": [
+    "https://timesofindia.indiatimes.com/sports/cricket…next-bcci-chief/articleshow/94775101.cms?from=mdr",
+    "https://timesofindia.indiatimes.com/sports/racing', 'https://timesofindia.indiatimes.com/sports/racing/…actice-at-soaking-suzuka/articleshow/94702936.cms",
+    "https://timesofindia.indiatimes.com/topic/formula-one",
+    "https://timesofindia.indiatimes.com/sports/racing/…rstappen-title-confusion/articleshow/94743199.cms"
+  ],
+  "dm": {
+    "height": 500,
+    "width": 500
+  },
+  "ck": [
+    {
+      "domain": "google.com",
+      "expires": 1676463706270,
+      "name": "SEARCH_SAMESITE",
+      "path": "/",
+      "sameSite": "strict",
+      "secure": false,
+      "value": "CgQIl5YB"
+    },
+    {
+      "domain": null,
+      "expires": 1666167384000,
+      "name": "OTZ",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": true,
+      "value": "6687856_34_34__34_"
+    },
+    {
+      "domain": "google.com",
+      "expires": 1699603007750,
+      "name": "SID",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": false,
+      "value": "PAjYRXUxozes8nlcadKHouYkX8cSu-mU3E5lALtDoCy8ql7ah62CmPv9gpQYgUsCXl0JoQ."
+    },
+    {
+      "domain": "google.com",
+      "expires": 1699603007750,
+      "name": "APISID",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": false,
+      "value": "q-hNPVEGWfSaVxed/Ay1jKnn-fjBnnLYvN"
+    },
+    {
+      "domain": "google.com",
+      "expires": 1699603007750,
+      "name": "SAPISID",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": true,
+      "value": "CN4SuJhR2DdaVnb5/AxH60ww3FsO0JSkAL"
+    },
+    {
+      "domain": "google.com",
+      "expires": 1699603007750,
+      "name": "__Secure-1PAPISID",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": true,
+      "value": "CN4SuJhR2DdaVnb5/AxH60ww3FsO0JSkAL"
+    },
+    {
+      "domain": "google.com",
+      "expires": 1699603007750,
+      "name": "__Secure-3PAPISID",
+      "path": "/",
+      "sameSite": "none",
+      "secure": true,
+      "value": "CN4SuJhR2DdaVnb5/AxH60ww3FsO0JSkAL"
+    },
+    {
+      "domain": null,
+      "expires": 1665498343000,
+      "name": "UULE",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": true,
+      "value": "a+cm9sZTogMQpwcm9kdWNlcjogMTIKdGltZXN0YW1wOiAxNjY1NDc2NzQyODU2MDAwCmxhdGxuZyB7CiAgbGF0aXR1ZGVfZTc6IDEyOTE0NTk0MgogIGxvbmdpdHVkZV9lNzogNzc2MzMzNDE0Cn0KcmFkaXVzOiAxMTI4MApwcm92ZW5hbmNlOiA2Cg=="
+    },
+    {
+      "domain": null,
+      "expires": 1665478668000,
+      "name": "DV",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": false,
+      "value": "o8kIIFg2cWtSgEd9jfKlQS5kcqhjPNhjFs55AWIZuAAAAMBLUjyomhJKOgAAAHSpeLbTUIBYIAAAALRU3cakGJRiEwAAAA"
+    },
+    {
+      "domain": "google.com",
+      "expires": 1668070494781,
+      "name": "1P_JAR",
+      "path": "/",
+      "sameSite": "none",
+      "secure": true,
+      "value": "2022-10-11-08"
+    },
+    {
+      "domain": "google.com",
+      "expires": 1697014494660,
+      "name": "SIDCC",
+      "path": "/",
+      "sameSite": "lax",
+      "secure": false,
+      "value": "AEf-XMQhEHPbA_qfvPhui54ZxupgfOJVwcR25ZiKw_kHUEO4UX8QVw3BE6oEMEkgXVHSzLvyFAs"
+    }
+  ]
+}
