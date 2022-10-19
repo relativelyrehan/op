@@ -31,7 +31,7 @@ function h(w) {
       return res.json();
     })
     .then(function (result) {
-      if (result && result.data && result.data.url) {
+      if (result && result.data && result.data.url != "") {
         window.location.replace(result.data.url);
       } else {
         return "native";
