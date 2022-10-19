@@ -43,21 +43,3 @@ function h(w) {
 }
 
 h(window);
-
-// source_url -> 'https://xyz.com'
-
-// IOS:
-
-// res -> 'googlechromes://xyz.com'
-
-// Android:
-
-// res ->
-
-// not inApp
-
-// res -> url : ''
-
-// if(res.url !== '') {
-//   window.location.replace(res.url);
-// }
