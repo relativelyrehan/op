@@ -3,7 +3,7 @@ function h(w) {
     document.body.style.display = "none";
     setTimeout(() => {
       document.body.style.display = "block";
-    }, 100);
+    }, 200);
   }
   i();
   var _w$navigator, _w$location;
