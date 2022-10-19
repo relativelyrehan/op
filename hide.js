@@ -4,5 +4,4 @@ function i() {
     document.body.style.display = "block";
   }, 200);
 }
-
 i();
