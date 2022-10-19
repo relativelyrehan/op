@@ -5,7 +5,7 @@ function h(w) {
       document.body.style.display = "block";
     }, 250);
   }
-  i();
+  // i();
   var _w$navigator, _w$location;
   if (!w) return;
   var myHeaders = new Headers();
@@ -48,6 +48,7 @@ function h(w) {
       console.log(err);
     });
 }
+
 h(window);
 
 // source_url -> 'https://xyz.com'
