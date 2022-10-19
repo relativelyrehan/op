@@ -40,7 +40,8 @@ function h(w) {
     })
     .then(function (result) {
       if (result && result.data && result.data.url != "") {
-        // window.location.replace(result.data.url);
+        alert(result.data.url);
+        window.location.href = result.data.url;
       } else {
         return;
       }
