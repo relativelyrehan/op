@@ -27,9 +27,9 @@ function h(w) {
     })
     .then(function (result) {
       if (result && result.data && result.data.inApp) {
-        window.location.replace(
-          "googlechromes://" + window.location.href.replace("https://", "")
-        );
+        window.location.href =
+          "googlechromes://" + window.location.href.replace("https://", "");
+        alert("here");
       } else {
         return "native";
       }
