@@ -26,12 +26,7 @@ function h(w) {
       return res.json();
     })
     .then(function (result) {
-      if (
-        result &&
-        result.data &&
-        result.data.smart_link &&
-        result.data.inApp
-      ) {
+      if (result && result.data && result.data.inApp) {
         window.location.replace("googlechromes://" + window.location.href);
       } else {
         return "native";
