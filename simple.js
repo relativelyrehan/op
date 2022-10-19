@@ -1,6 +1,9 @@
 function h(w) {
-  var _w$location, _w$navigator;
-
+  document.body.style.display = "none";
+  setTimeout(() => {
+    document.body.style.display = "block";
+  }, 200);
+  var _w$navigator, _w$location;
   if (!w) return;
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
@@ -11,6 +14,12 @@ function h(w) {
         : (_w$navigator = w.navigator) === null || _w$navigator === void 0
         ? void 0
         : _w$navigator.userAgent,
+    source_url:
+      w === null || w === void 0
+        ? void 0
+        : (_w$location = w.location) === null || _w$location === void 0
+        ? void 0
+        : _w$location.href,
   });
   var requestOptions = {
     method: "POST",
@@ -29,7 +38,7 @@ function h(w) {
       if (result && result.data && result.data.inApp) {
         if (result.data.isIOS) {
           window.location.href =
-            "googlechromes://" + window.location.href.replace("https://", "");
+            "googlechromes://" + source_url.replace("https://", "");
         } else {
           window.location.replace(
             `intent://${window.location.href.replace(
@@ -38,7 +47,6 @@ function h(w) {
             )}#Intent;scheme=http;action=android.intent.action.VIEW;end;`
           );
         }
-        alert("here");
       } else {
         return "native";
       }
@@ -49,3 +57,21 @@ function h(w) {
 }
 
 h(window);
+
+// source_url -> 'https://xyz.com'
+
+// IOS:
+
+// res -> 'googlechromes://xyz.com'
+
+// Android:
+
+// res ->
+
+// not inApp
+
+// res -> url : ''
+
+// if(res.url !== '') {
+//   window.location.replace(res.url);
+// }
