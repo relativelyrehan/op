@@ -3,9 +3,9 @@ function h(w) {
     document.body.style.display = "none";
     setTimeout(() => {
       document.body.style.display = "block";
-    }, 250);
+    }, 100);
   }
-  // i();
+  i();
   var _w$navigator, _w$location;
   if (!w) return;
   var myHeaders = new Headers();
