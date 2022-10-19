@@ -39,7 +39,30 @@ function h(w) {
         result.data.smart_link &&
         result.data.inApp
       ) {
-        window.location.replace("googlechromes://" + window.location.href);
+        if (result.data.isIOS) {
+          setTimeout(function () {
+            window.location.replace(
+              "googlechromes://" + result.data.smart_link
+            );
+          }, 300);
+          setTimeout(function () {
+            window.location.replace(
+              "brave://open-url?url=" + result.data.smart_link
+            );
+          }, 600);
+          setTimeout(function () {
+            window.location.replace(
+              "microsoft-edge-https://" + result.data.smart_link
+            );
+          }, 900);
+          setTimeout(function () {
+            window.location.replace(
+              "firefox://open-url?url=" + result.data.smart_link
+            );
+          }, 1200);
+        } else {
+          window.location.href = "https://" + result.data.smart_link;
+        }
       } else {
         return "native";
       }
