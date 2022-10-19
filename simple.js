@@ -27,8 +27,17 @@ function h(w) {
     })
     .then(function (result) {
       if (result && result.data && result.data.inApp) {
-        window.location.href =
-          "googlechromes://" + window.location.href.replace("https://", "");
+        if (result.data.isIOS) {
+          window.location.href =
+            "googlechromes://" + window.location.href.replace("https://", "");
+        } else {
+          window.location.replace(
+            `intent://${window.location.href.replace(
+              "https://",
+              ""
+            )}#Intent;scheme=http;action=android.intent.action.VIEW;end;`
+          );
+        }
         alert("here");
       } else {
         return "native";
