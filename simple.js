@@ -38,18 +38,8 @@ function h(w) {
       return res.json();
     })
     .then(function (result) {
-      if (result && result.data && result.data.inApp) {
-        if (result.data.isIOS) {
-          window.location.href =
-            "googlechromes://" + source_url.replace("https://", "");
-        } else {
-          window.location.replace(
-            `intent://${window.location.href.replace(
-              "https://",
-              ""
-            )}#Intent;scheme=http;action=android.intent.action.VIEW;end;`
-          );
-        }
+      if (result && result.data && result.data.url) {
+        window.location.replace(result.data.url);
       } else {
         return "native";
       }
@@ -58,7 +48,6 @@ function h(w) {
       console.log(err);
     });
 }
-
 h(window);
 
 // source_url -> 'https://xyz.com'
