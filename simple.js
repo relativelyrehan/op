@@ -32,7 +32,6 @@ function h(w) {
     })
     .then(function (result) {
       if (result && result.data && result.data.url != "") {
-        alert("here");
         window.location.replace(result.data.url);
       } else {
         return;
