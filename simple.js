@@ -5,13 +5,6 @@ function h(w) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
-    source_url:
-      w === null || w === void 0
-        ? void 0
-        : (_w$location = w.location) === null || _w$location === void 0
-        ? void 0
-        : _w$location.href,
-    user_id: 11231,
     user_agent:
       w === null || w === void 0
         ? void 0
@@ -26,7 +19,7 @@ function h(w) {
     redirect: "follow",
   };
   fetch(
-    "https://service.openinapp.com/api/v1/link/generate-sdk",
+    "https://helper.openinapp.com/api/v1/link/parse-url-agent",
     requestOptions
   )
     .then(function (res) {
