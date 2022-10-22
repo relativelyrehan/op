@@ -4,6 +4,7 @@ function h(w) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
+    user_id: "c238826f-5ff5-4dc6-bf5d-4809d2778f83",
     user_agent:
       w === null || w === void 0
         ? void 0
