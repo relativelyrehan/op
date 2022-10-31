@@ -8,20 +8,32 @@
   </head>
   <body>
     <script>
-      alert(JSON.stringify(!!window.chrome));
-      //   window.location.href = `intent://${"youtube.com"}#Intent;scheme=http;action=android.intent.action.VIEW;end;;`;
+      // alert(JSON.stringify(!!window.chrome));
+      // window.location.href =
+      // `intent://${"youtube.com"}#Intent;scheme=http;action=android.intent.action.VIEW;end;;`;
     </script>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia dolores
-      beatae ullam facere. Quis facere soluta ipsa minus! Repellendus ipsam
-      adipisci dolores maiores explicabo eos aperiam qui quis aliquam
-      laboriosam.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iste
-      fuga iure animi voluptas minus consequuntur dolore enim fugiat at
-      inventore necessitatibus alias earum doloribus repellat velit magnam dolor
-      est.
-    </p>
+    <script type="text/javascript">
+      function selectTechnologyLocation() {
+        var isWebRTCSupported =
+          navigator.getUserMedia ||
+          navigator.webkitGetUserMedia ||
+          navigator.mozGetUserMedia ||
+          navigator.msGetUserMedia ||
+          window.RTCPeerConnection;
+
+        if (window.navigator.userAgent.indexOf("Edge") > -1) {
+          return UNSUPPORTED_URL;
+        }
+
+        if (isWebRTCSupported) {
+          document.write("Is WEBRTC");
+          return;
+        } else {
+          document.write("Not WEBRTC");
+          return;
+        }
+      }
+      window.location = selectTechnologyLocation();
+    </script>
   </body>
 </html>
