@@ -8,22 +8,31 @@
     <title>Document</title>
     <script>
         document.write(navigator.userAgent)
-        document.write(navigator.standalone)
+        // document.write(navigator.standalone)
 
-        function isRunningStandalone() {
-            const rules = [
-                'WebView',
-                '(iPhone|iPod|iPad)(?!.*Safari\/)',
-                'Android.*(wv)',
-            ];
-            const regex = new RegExp(`(${rules.join('|')})`, 'ig');
-            return Boolean(navigator.userAgent.match(regex));
-        }
-        if (isRunningStandalone()) {
-            document.write('I am in IN APP')
-        } else {
-            document.write('Not in inapp')
-        }
+        // function isRunningStandalone() {
+        //     const rules = [
+        //         'WebView',
+        //         '(iPhone|iPod|iPad)(?!.*Safari\/)',
+        //         'Android.*(wv)',
+        //     ];
+        //     const regex = new RegExp(`(${rules.join('|')})`, 'ig');
+        //     return Boolean(navigator.userAgent.match(regex));
+        // }
+        // if (isRunningStandalone()) {
+        //     document.write('I am in IN APP')
+        // } else {
+        //     document.write('Not in inapp')
+        // }
+        window.addEventListener('DOMContentLoaded', () => {
+            let displayMode = 'browser tab';
+            if (window.matchMedia('(display-mode: standalone)').matches) {
+                displayMode = 'standalone';
+            }
+            // Log launch display mode to analytics
+            document.write('DISPLAY_MODE_LAUNCH:', displayMode);
+
+        });
     </script>
 </head>
 
