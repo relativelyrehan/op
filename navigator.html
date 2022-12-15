@@ -9,6 +9,14 @@
     <script>
         document.write(navigator.userAgent)
         document.write(navigator.standalone)
+
+        function isRunningStandalone() {
+            return (window.matchMedia('(display-mode: standalone)').matches);
+        }
+        if (isRunningStandalone()) {
+            /* This code will be executed if app is running standalone */
+            document.write('I am in IN APP')
+        }
     </script>
 </head>
 
