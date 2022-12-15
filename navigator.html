@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        document.write(navigator.userAgent)
-        document.write(JSON.stringify(window.localStorage))
+        // document.write(navigator.userAgent)
+        // document.write(JSON.stringify(window.localStorage))
+        document.write(JSON.stringify(Object.getOwnPropertyNames(window)))
+        document.write(JSON.stringify(Object.getOwnPropertyNames(navigator)))
+
         // document.write(navigator.standalone)
 
         // function isRunningStandalone() {
