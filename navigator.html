@@ -24,15 +24,17 @@
         // } else {
         //     document.write('Not in inapp')
         // }
-        window.addEventListener('DOMContentLoaded', () => {
-            let displayMode = 'browser tab';
-            if (window.matchMedia('(display-mode: standalone)').matches) {
-                displayMode = 'standalone';
-            }
-            // Log launch display mode to analytics
-            document.write('DISPLAY_MODE_LAUNCH:', displayMode);
+        // window.addEventListener('DOMContentLoaded', () => {
+        //     let displayMode = 'browser tab';
+        //     if (window.matchMedia('(display-mode: standalone)').matches) {
+        //         displayMode = 'standalone';
+        //     }
+        //     // Log launch display mode to analytics
+        //     document.write('DISPLAY_MODE_LAUNCH:', displayMode);
 
-        });
+        // });
+
+        document.write(Blob(Object.values(localStorage)).size);
     </script>
 </head>
 
