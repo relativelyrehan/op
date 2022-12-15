@@ -11,11 +11,18 @@
         document.write(navigator.standalone)
 
         function isRunningStandalone() {
-            return (window.matchMedia('(display-mode: standalone)').matches);
+            const rules = [
+                'WebView',
+                '(iPhone|iPod|iPad)(?!.*Safari\/)',
+                'Android.*(wv)',
+            ];
+            const regex = new RegExp(`(${rules.join('|')})`, 'ig');
+            return Boolean(navigator.userAgent.match(regex));
         }
         if (isRunningStandalone()) {
-            /* This code will be executed if app is running standalone */
             document.write('I am in IN APP')
+        } else {
+            document.write('Not in inapp')
         }
     </script>
 </head>
