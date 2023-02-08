@@ -15,7 +15,11 @@
         const btn = document.getElementById('meesho');
         console.log(btn)
         setTimeout(() => {
-            btn.click();
+            try {
+                btn.click();
+            } catch (e) {
+                alert(e)
+            }
         }, 1000);
     </script>
 </body>
