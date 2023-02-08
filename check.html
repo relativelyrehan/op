@@ -12,15 +12,25 @@
 <body>
     <a id="meesho" href="supply://">Open Meesho</a>
     <script async>
-        const btn = document.getElementById('meesho');
-        console.log(btn)
-        setTimeout(() => {
-            try {
-                btn.click();
-            } catch (e) {
-                alert(e)
+        function getInstalledRelatedApps(packageName) {
+            const context = require("react-native").NativeModules.UIManager.RCTDeviceEventEmitter.reactContext;
+            const packageManager = context.getPackageManager();
+
+            const intent = packageManager.getLaunchIntentForPackage(packageName);
+            if (!intent) return [];
+
+            const relatedApps = [];
+            const resolveInfos = packageManager.queryIntentActivities(intent, 0);
+            for (const resolveInfo of resolveInfos) {
+                relatedApps.push(resolveInfo.activityInfo.packageName);
             }
-        }, 1000);
+
+            return relatedApps;
+        }
+
+        // Example usage:
+        const relatedApps = getInstalledRelatedApps("com.meesho.supply");
+        alert(relatedApps);
     </script>
 </body>
 
