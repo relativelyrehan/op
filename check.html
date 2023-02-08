@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check Intent</title>
-    <script>
-        const btn = document.querySelector('#meesho');
-        setTimeout(() => {
-            btn.click();
-        }, 1000);
-    </script>
+
 </head>
 
 <body>
     <a id="meesho" href="supply://">Open Meesho</a>
+    <script async>
+        const btn = document.getElementById('meesho');
+        console.log(btn)
+        setTimeout(() => {
+            btn.click();
+        }, 1000);
+    </script>
 </body>
 
 </html>
